@@ -1,3 +1,16 @@
 {
-    "rewrites": [{"source": "/(.*)", "destination": "/"}]
-}
+    "routes": [
+      {
+        "src": "/",
+        "dest": "<App />",
+        "errorElement": "<Erro404 />",
+        "children": [
+          { "src": "/", "element": "<Home />" },
+          { "src": "/produtos", "element": "<Produtos />" },
+          { "src": "/editar/produtos/:id", "element": "<EditarProdutos />" },
+          { "src": "/excluir/produtos/:id", "element": "<ExcluirProdutos />" }
+        ]
+      }
+    ]
+  }
+  
